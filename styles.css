@@ -1,0 +1,70 @@
+body {
+    background-color: white;
+}
+
+header {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+p, code, li a, li {
+    color: #333;
+}
+
+li {
+    margin: .5rem;
+    list-style: none;
+}
+
+li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: Gray;
+    border-top: 1px solid black;
+    padding-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+#navbar {
+    position: fixed;
+    overflow-y: scroll;
+    max-width: 20vw;
+    height: 100vh;
+    float: left;
+    border-right: 5px solid lightGray;
+}
+
+#main-doc {
+    float: right;
+    max-width: 76vw;
+}
+
+.nav-container {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.nav-container li a{
+    display: block;
+}
+
+.nav-container li a:hover {
+    background-color: lightGray;
+    transition: background-color 1s;
+}
+
+@media (max-width: 500px) {
+    #main-doc {
+        float: none;
+        max-width: 100%;
+    }
+    #navbar {
+        float: none;
+        position: static;
+        max-width: 100vw;
+        height: 200px;
+    }
+}

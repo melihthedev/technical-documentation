@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Python Technical Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Python Technical Documentation</header>
+        <ul class="nav-container">
+            <li><a href="#introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#requirement" class="nav-link">Requirements</a></li>
+            <li><a href="#numbers" class="nav-link">Numbers</a></li>
+            <li><a href="#strings" class="nav-link">Strings</a></li>
+            <li><a href="#if-statement" class="nav-link">If Statement</a></li>
+            <li><a href="#for-loop" class="nav-link">For Loop</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header class="main-heading">Introduction to Python</header>
+            <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.</p>
+            <p>The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python Web site, <a href="https://www.python.org/" target="_blank">https://www.python.org/</a>, and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.</p>
+        </section>
+        <section class="main-section" id="requirement">
+            <header class="main-heading">What you should already know</header>
+            <p>This guide assumes you have the following basic background:</p>
+            <ul id="req-list">
+                <li>Access to a computer</li>
+                <li>Basic Programming</li>
+                <li>Computer Knowledge</li>
+                <li>Passion to learn new things</li>
+            </ul>
+        </section>
+        <section class="main-section" id="numbers">
+            <header class="main-heading">Numbers</header>
+            <p>The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages</p>
+            <code>2 + 2 >>> = 4</code>
+            <br>
+            <code>50 - (8*3) >>> = 26</code>
+            <p>The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float. We will see more about numeric types later in the tutorial.</p>
+        </section>
+        <section class="main-section" id="strings">
+            <header class="main-heading">Strings</header>
+            <p>Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes ('...') or double quotes ("...") with the same result 2. \ can be used to escape quotes:</p>
+            <code>'spam eggs' >>> #strings should in between quotes</code>
+            <br>
+            <code>print('"Isn\'t," they said.') >>>> "Isn't," they said.</code>
+            <p>In the interactive interpreter, the output string is enclosed in quotes and special characters are escaped with backslashes. While this might sometimes look different from the input (the enclosing quotes could change), the two strings are equivalent. The string is enclosed in double quotes if the string contains a single quote and no double quotes, otherwise it is enclosed in single quotes. The <code>print()</code> function produces a more readable output, by omitting the enclosing quotes and by printing escaped and special characters:</p>
+        </section>
+        <section class="main-section" id="lists">
+            <header class="main-heading">Lists</header>
+            <p>Python knows a number of compound data types, used to group together other values. The most versatile is the list, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type.</p>
+            <code>>>> squares = [1, 4, 9, 16, 25]</code>
+            <br>
+            <code>>>> squares</code>
+            <br>
+            <code>[1, 4, 9, 16, 25]</code>
+        </section>
+        <section class="main-section" id="if-statement">
+            <header class="main-heading">if Statements</header>
+            <p>Perhaps the most well-known statement type is the if statement. For example:</p>
+            <code>
+                >>> x = int(input("Please enter an integer: "))<br>
+                    Please enter an integer: 42<br>
+                    >>> if x < 0:<br>
+                    ...     x = 0<br>
+                    ...     print('Negative changed to zero')<br>
+                    ... elif x == 0:<br>
+                    ...     print('Zero')<br>
+                    ... elif x == 1:<br>
+                    ...     print('Single')<br>
+                    ... else:<br>
+                    ...     print('More')<br>
+                    ...
+            </code>
+            <p>There can be zero or more elif parts, and the else part is optional. The keyword ‘elif’ is short for ‘else if’, and is useful to avoid excessive indentation. An if … elif … elif … sequence is a substitute for the switch or case statements found in other languages.</p>
+        </section>
+        <section class="main-section" id="for-loop">
+            <header class="main-heading">for Loops</header>
+            <p>The for statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the iteration step and halting condition (as C), Python’s for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun intended):</p>
+            <code>
+                >>> # Measure some strings:<br>
+                    ... words = ['cat', 'window', 'defenestrate']<br>
+                    >>> for w in words:<br>
+                    ...     print(w, len(w))<br>
+                    ...<br>
+                    cat 3<br>
+                    window 6<br>
+                    defenestrate 12<br>
+            </code>
+        </section>
+    </main>
+</body>
+</html>
